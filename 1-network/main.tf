@@ -1,11 +1,11 @@
 data "aws_availability_zones" "available" {}
 
 locals {
-  azs = var.azs
-  tags = {
-    Project = var.project
-  }
-}
+   azs = var.azs
+   tags = {
+     Project = var.project
+   }
+ }
 
 resource "aws_vpc" "this" {
   cidr_block           = var.vpc_cidr
